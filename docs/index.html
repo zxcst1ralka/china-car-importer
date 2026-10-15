@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>China Car Importer — кейс</title>
+<meta name="description" content="WordPress-плагин для импорта авто из Китая: каталог, калькулятор, заявки, проверка VIN с оплатой.">
+<style>
+:root{--bg:#070A12;--s:#0F1524;--l:rgba(255,255,255,.1);--t:#EEF2FA;--m:#8D99B3;--a:#FF4B3A}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}.w{max-width:1100px;margin:0 auto;padding:0 24px}
+header{padding:90px 0 50px}h1{font-size:clamp(34px,6vw,72px);line-height:1;margin:14px 0;letter-spacing:-.03em}
+.k{color:#FF7A5C;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+p.lead{color:var(--m);max-width:680px;font-size:19px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid var(--l)}
+.p{background:var(--a);border-color:var(--a);color:#fff}
+video{width:100%;border-radius:20px;border:1px solid var(--l);display:block;margin:30px 0;background:#000}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:30px 0}
+.c{background:var(--s);border:1px solid var(--l);border-radius:16px;padding:22px}.c h3{margin:0 0 8px;font-size:17px}.c p{margin:0;color:var(--m);font-size:14.5px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}.shots img{width:100%;border-radius:14px;border:1px solid var(--l);display:block}
+h2{font-size:28px;margin:60px 0 6px}.tags span{display:inline-block;border:1px solid var(--l);border-radius:999px;padding:5px 14px;margin:4px 6px 0 0;font-size:13px;color:var(--m)}
+footer{padding:60px 0;color:var(--m);font-size:14px}
+</style></head><body>
+<header><div class="w"><span class="k">Кейс · WordPress</span>
+<h1>China Car Importer</h1>
+<p class="lead">Сайт и админка для компании по импорту автомобилей из Китая: каталог с ценой «под ключ», калькулятор пошлин, заявки и платная проверка VIN с оплатой через ЮKassa.</p>
+<div class="btns"><a class="btn p" href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/zxcst1ralka/china-car-importer/main/blueprint.json">Открыть живое демо</a><a class="btn" href="https://github.com/zxcst1ralka/china-car-importer">Код на GitHub</a></div></div></header>
+<div class="w">
+<video src="hero.mp4" poster="poster.jpg" controls muted loop playsinline></video>
+<h2>Что внутри</h2>
+<div class="g">
+<div class="c"><h3>Видео, которое листается скроллом</h3><p>Главная управляется прокруткой: павильон открывается, а этапы доставки меняются вместе с кадрами.</p></div>
+<div class="c"><h3>Цена «под ключ»</h3><p>Алгоритм учитывает возраст, объём, мощность, тип двигателя, курсы и сборы. Один и тот же расчёт в каталоге и в калькуляторе.</p></div>
+<div class="c"><h3>Проверка VIN и оплата</h3><p>ЮKassa: мгновенное списание или холд, вебхуки, чеки 54-ФЗ, отправка отчёта клиенту из админки.</p></div>
+<div class="c"><h3>Админка для менеджера</h3><p>Обзор, заявки, каталог с фото, настройки. Без технических знаний и с подсказками по шагам.</p></div>
+</div>
+<h2>Скриншоты</h2>
+<div class="shots">
+<img src="shots/home.jpg" alt="Главная" onerror="this.remove()"><img src="shots/catalog.jpg" alt="Каталог" onerror="this.remove()">
+<img src="shots/calc.jpg" alt="Калькулятор" onerror="this.remove()"><img src="shots/admin.jpg" alt="Админка" onerror="this.remove()">
+</div>
+<h2>Стек</h2>
+<div class="tags"><span>WordPress</span><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>CSS</span><span>ЮKassa API</span><span>REST webhook</span></div>
+</div>
+<footer><div class="w">Автор: Vadim Deko · контакты: faithfuk@yandex.ru · Telegram @zxcst1ralka</div></footer>
+</body></html>

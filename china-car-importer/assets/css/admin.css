@@ -1,0 +1,65 @@
+/* Админка China Car Importer */
+.cci-admin{max-width:1500px}
+.cci-admin .cci-help{background:#f0f6fc;border:1px solid #c5d9ed;border-left:4px solid #2271b1;border-radius:4px;padding:12px 16px;margin:12px 0 16px;font-size:13.5px;line-height:1.6;max-width:1100px}
+.cci-muted{color:#757575}
+.cci-warn{color:#b32d2e;font-weight:600}
+.cci-table th{font-weight:600}
+.cci-table td{vertical-align:top;padding:10px}
+.cci-empty{text-align:center;padding:40px 10px!important;color:#757575}
+.cci-hl td{background:#fff8e1!important}
+.cci-badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:11.5px;font-weight:600;border:1px solid transparent;white-space:nowrap}
+.cci-b-new{background:#e3f2fd;color:#0d47a1;border-color:#90caf9}
+.cci-b-work{background:#fff3e0;color:#b34a00;border-color:#ffcc80}
+.cci-b-done{background:#e8f5e9;color:#1b5e20;border-color:#a5d6a7}
+.cci-b-off{background:#f1f1f1;color:#555;border-color:#d0d0d0}
+.cci-danger{color:#b32d2e!important;border-color:#e0b4b4!important}
+.cci-thumb{width:84px;height:56px;object-fit:cover;border-radius:4px;display:block}
+.cci-price{font-size:16px;color:#b32d2e}
+.cci-details summary{cursor:pointer;color:#2271b1;font-size:12px;margin-top:4px}
+.cci-details .button{display:inline-block}
+.cci-estimate{background:#f6f7f7;padding:8px 10px;border-radius:4px;margin-top:6px;font-size:12px;line-height:1.7}
+.cci-mini-form{margin-top:8px;padding:12px;background:#f6f7f7;border-radius:6px;border:1px solid #dcdcde}
+.cci-mini-form label{display:block;font-weight:600;margin:8px 0 4px;font-size:12px}
+.cci-mini-form label:first-child{margin-top:0}
+.cci-mini-form .button-primary{margin-top:10px}
+.cci-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.cci-row input{flex:1;min-width:160px}
+
+/* обзор */
+.cci-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:16px 0;max-width:1000px}
+.cci-card{display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid #dcdcde;border-radius:8px;padding:18px 20px;text-decoration:none;color:#1d2327;transition:.15s}
+.cci-card:hover{border-color:#2271b1;box-shadow:0 2px 10px rgba(0,0,0,.08);color:#1d2327}
+.cci-card-n{font-size:38px;font-weight:700;line-height:1.1}
+.cci-card-t{font-size:14px;font-weight:600}
+.cci-card small{color:#757575}
+.cci-card-hot{border-color:#d63638;background:#fff6f6}
+.cci-card-hot .cci-card-n{color:#d63638}
+.cci-actions{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 20px}
+.cci-box{background:#fff;border:1px solid #dcdcde;border-radius:8px;padding:6px 22px 18px;margin:0 0 18px;max-width:1000px}
+.cci-box h2{font-size:16px;margin:14px 0 10px}
+.cci-checks{margin:0}
+.cci-checks li{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #f0f0f1}
+.cci-checks li:last-child{border-bottom:0}
+.cci-dot{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;color:#fff}
+.cci-checks .ok .cci-dot{background:#1a7f37}
+.cci-checks .warn .cci-dot{background:#d63638}
+.cci-ct{flex:1}
+.cci-steps{margin:0 0 8px 18px}
+.cci-steps li{margin-bottom:8px}
+
+/* форма автомобиля */
+.cci-form .cci-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1000px}
+.cci-form .cci-box{max-width:1000px}
+.cci-form .cci-cols .cci-box{max-width:none}
+.cci-grid2{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.cci-form label{display:block;font-weight:600;margin-bottom:4px}
+.cci-form input[type=text],.cci-form input[type=number],.cci-form input[type=date],.cci-form input[type=url],.cci-form select{width:100%;max-width:100%}
+.cci-form .description{display:block;margin-top:4px}
+.cci-photos{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0}
+.cci-ph{position:relative;width:150px;height:104px;border-radius:6px;overflow:hidden;border:1px solid #dcdcde;background:#f6f7f7}
+.cci-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.cci-ph-main{position:absolute;left:6px;top:6px;background:#1a7f37;color:#fff;border-radius:4px;font-size:11px;padding:2px 6px}
+.cci-ph-btns{position:absolute;right:4px;bottom:4px;display:flex;gap:4px}
+.cci-ph-btns button{border:0;border-radius:4px;background:rgba(0,0,0,.65);color:#fff;width:26px;height:26px;cursor:pointer;font-size:14px;line-height:1}
+.cci-ph-btns button:hover{background:#d63638}
+@media (max-width:900px){.cci-form .cci-cols,.cci-grid2{grid-template-columns:1fr}}

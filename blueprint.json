@@ -1,0 +1,30 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "China Car Importer: live demo",
+    "description": "Каталог авто из Китая, калькулятор «под ключ», заявки и проверка VIN",
+    "author": "Vadim Deko"
+  },
+  "landingPage": "/",
+  "login": true,
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/zxcst1ralka/china-car-importer/main/dist/china-car-importer.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\nglobal $wpdb;\nupdate_option('blogname', 'CHINACARS');\nupdate_option('blogdescription', 'Автомобили из Китая под ключ');\nupdate_option('timezone_string', 'Asia/Vladivostok');\nupdate_option('permalink_structure', '/%postname%/');\nupdate_option('cci_cny_rate', 13.5);\nupdate_option('cci_eur_rate', 102);\nupdate_option('cci_rates_updated', time());\nupdate_option('cci_contact_phone', '+7 (900) 000-00-00');\nupdate_option('cci_contact_telegram', 'chinacars_demo');\nupdate_option('cci_company_name', 'ИП Иванов Иван Иванович (демо)');\ncci_ensure_catalog_table(); cci_ensure_leads_table(); cci_ensure_vin_table();\n$base = plugins_url('china-car-importer/assets/demo/');\n$cars = [\n  ['Zeekr', '001', 2023, '2023-09-01', 19500, 'ev', 0, 544, '4wd', 235000, [$base . 'zeekr-1.jpg', $base . 'zeekr-2.jpg']],\n  ['Li Auto', 'L7 Max', 2024, '2024-02-10', 6800, 'hybrid', 1496, 449, '4wd', 288000, []],\n  ['Geely', 'Monjaro', 2023, '2023-05-15', 14200, 'petrol', 1969, 238, '4wd', 139000, []],\n];\nif (!(int) $wpdb->get_var(\"SELECT COUNT(*) FROM {$wpdb->prefix}car_catalog\")) {\n  foreach ($cars as $c) {\n    cci_save_car(0, ['brand'=>$c[0],'model'=>$c[1],'year'=>$c[2],'reg_date'=>$c[3],'mileage'=>$c[4],'engine_type'=>$c[5],'engine_cc'=>$c[6],'power_hp'=>$c[7],'drive_type'=>$c[8],'price_cny'=>$c[9],'vin'=>'','cdn_images'=>wp_json_encode($c[10], JSON_UNESCAPED_SLASHES),'status'=>'active']);\n  }\n}\ncci_setup_site_pages();\nupdate_option('cci_site_version', CCI_SITE_VERSION);\nflush_rewrite_rules();\n"
+    }
+  ]
+}
