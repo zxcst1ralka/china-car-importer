@@ -2,9 +2,9 @@
 
 WordPress-плагин и дизайн-система «под ключ» для компании, которая привозит автомобили из Китая: каталог с ценой «под ключ», калькулятор пошлин, заявки, платная проверка VIN с оплатой через ЮKassa и полностью свой фронтенд (тема не нужна).
 
-> **Витрина проекта:** https://zxcst1ralka.github.io/china-car-importer/
+> **Витрина проекта:** [zxcst1ralka.github.io/china-car-importer](https://zxcst1ralka.github.io/china-car-importer/)
 >
-> **Живое демо:** `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/zxcst1ralka/china-car-importer/main/blueprint.json`
+> **Живое демо:** [Открыть демо в WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/zxcst1ralka/china-car-importer/main/blueprint.json)
 > (откроется временный WordPress в браузере с уже установленным плагином, демо-данными и входом в админку)
 
 ## Что умеет
